@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import TopNav from "./_components/topnav";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,7 +34,7 @@ export default function RootLayout({
           <div className="grid h-screen grid-rows-[auto,1fr]">
             <TopNav />
             <main className="overflow-y-scroll">{children}</main>
-            {modal}
+            <Toaster />
           </div>
           <div id="modal-root" />
         </body>
