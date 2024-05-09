@@ -15,8 +15,8 @@ async function Images() {
             <Image
               src={image.url}
               style={{ objectFit: "contain" }}
-              width={480}
-              height={480}
+              width={192}
+              height={192}
               alt={image.name}
             />
           </Link>
